@@ -1,5 +1,4 @@
-$(function() {
 
-    $(".js-get-started")
+$(function() {
 
 });
