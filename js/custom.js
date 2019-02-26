@@ -1,0 +1,5 @@
+$(function() {
+
+    $(".js-get-started")
+
+});
