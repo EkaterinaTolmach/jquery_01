@@ -7,11 +7,18 @@ function showSomeShitInConsole(e){
     e.preventDefault();
     console.log("Какая-нибудь хрень");
 }
+function goToPlans(e) {
+    e.preventDefault();
+    var offsetPlans = $("#plans").offset().top;
+    $("html, body").animate({
+        scrollTop: offsetPlans
+    },1000);
+}
 function showModal(e){
     e.preventDefault();
     console.log(e);
     alert("Алерт!");
-    prompt("Промпт!");
+    prompt("Промпт:");
     confirm("Конферм?");
 }
 $(function() {
@@ -29,10 +36,10 @@ $(function() {
     console.log($('#subscribe_email'));
     /*конец 2-ого пункта*/
 
-
     console.log(showSelectors($('[href][class]')));
     console.log(showSelectors($('.footer-nav__link[href]')));
     $("button").on("click",showSomeShitInConsole);
     $("a.logo").on("click",showModal);
+    $(".js-get-started").on("click", goToPlans)
 
 });
