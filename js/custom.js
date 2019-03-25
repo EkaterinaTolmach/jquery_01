@@ -22,6 +22,7 @@ function showModal(e){
     confirm("Конферм?");
 }
 $(function() {
+    // НАЧАЛО 1-ОГО ЗАДАНИЯ
     /*начало 2-ого пункта*/
     console.log(showSelectors($("*"))); // все селекторы
     console.log(showSelectors($("[name = 'subscribe_email']"))); //с атрибутом name = 'subscribe_email'
@@ -41,5 +42,5 @@ $(function() {
     $("button").on("click",showSomeShitInConsole);
     $("a.logo").on("click",showModal);
     $(".js-get-started").on("click", goToPlans)
-
+    //КОНЕЦ 1-ОГО ЗАДАНИЯ
 });
