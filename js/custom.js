@@ -24,6 +24,7 @@ function showModal(e){
 $(function() {
     // НАЧАЛО 1-ОГО ЗАДАНИЯ
     /*начало 2-ого пункта*/
+    console.group("Первое задание");
     console.log(showSelectors($("*"))); // все селекторы
     console.log(showSelectors($("[name = 'subscribe_email']"))); //с атрибутом name = 'subscribe_email'
     console.log(showSelectors($("[name *= 'email']"))); //с атрибутом name, в значении которого есть 'email'
@@ -41,6 +42,20 @@ $(function() {
     console.log(showSelectors($('.footer-nav__link[href]')));
     $("button").on("click",showSomeShitInConsole);
     $("a.logo").on("click",showModal);
-    $(".js-get-started").on("click", goToPlans)
+    $(".js-get-started").on("click", goToPlans);
+    console.groupEnd();
     //КОНЕЦ 1-ОГО ЗАДАНИЯ
+
+    //НАЧАЛО 2-ОГО ЗАДАНИЯ
+    console.group("Второе задание");
+    console.group("Первая картинка на странице");
+    console.log($("img").first());
+    console.groupEnd();
+    console.group("Последняя картинка на странице");
+    console.log($("img").last());
+    console.groupEnd();
+    console.group("Блоки с классом container, имеющие поле ввода");
+    console.log($(".container").has("input"));
+    console.groupEnd();
+    //КОНЕЦ 2-ОГО ЗАДАНИЯ
 });
