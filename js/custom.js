@@ -21,6 +21,9 @@ function showModal(e){
     prompt("Промпт:");
     confirm("Конферм?");
 }
+function initActiveNavLink(){
+    $
+}
 $(function() {
     // НАЧАЛО 1-ОГО ЗАДАНИЯ
     /*начало 2-ого пункта*/
@@ -57,5 +60,6 @@ $(function() {
     console.group("Блоки с классом container, имеющие поле ввода");
     console.log($(".container").has("input"));
     console.groupEnd();
+    console.log(initActiveNavLink());
     //КОНЕЦ 2-ОГО ЗАДАНИЯ
 });
