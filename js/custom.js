@@ -21,9 +21,6 @@ function showModal(e){
     prompt("Промпт:");
     confirm("Конферм?");
 }
-function initActiveNavLink(){
-    $
-}
 $(function() {
     // НАЧАЛО 1-ОГО ЗАДАНИЯ
     /*начало 2-ого пункта*/
@@ -60,6 +57,10 @@ $(function() {
     console.group("Блоки с классом container, имеющие поле ввода");
     console.log($(".container").has("input"));
     console.groupEnd();
-    console.log(initActiveNavLink());
+    /*********Активная ссылка меню***********************/
+    $('.nav .nav__item').on('click', function () {
+        $('.nav .nav__item').removeClass("nav__item--active");
+        $(this).addClass("nav__item--active");
+    })
     //КОНЕЦ 2-ОГО ЗАДАНИЯ
 });
