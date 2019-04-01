@@ -50,7 +50,7 @@
                 <a href="#" class="nav__item">contacts</a>
             </nav>
 
-            <a href="#" class="btn btn_login pull-right">login</a>
+            <a href="#" class="btn btn_login pull-right js-show-modal">login</a>
         </div><!-- /.container -->
     </div><!-- /.nav-container -->
 
@@ -405,6 +405,25 @@
     </div>
 
 </div><!-- /.container footer -->
+
+<!-- Modals -->
+<div class="overlay" id="js-overlay"></div>
+<div class="modal js-modal" id="js-login-modal">
+    <h2>Modal Title</h2>
+    <form action="/">
+        <p>
+            <label for="login">Login</label>
+            <input name="login" placeholder="Login" id="login" type="text">
+        </p>
+        <p>
+            <label for="password">Name</label>
+            <input name="password" placeholder="Password" id="password" type="password">
+        </p>
+        <a href="#" type="submit" class="btn btn_red js-modal-close">Log in</a>
+    </form>
+</div>
+
+
 <!--1-й пункт Разные способы подключения скриптов-->
 <!-- Javascript section -->
 <!--<script>-->
