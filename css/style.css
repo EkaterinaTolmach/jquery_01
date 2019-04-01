@@ -6,3 +6,14 @@
 .nav__item--active {
     border-color: #e84c3d;
 }
+.nav-container {
+    transition: 0.3s;
+}
+.nav-container--fixed {
+    background-color: rgba(44, 48, 57, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
