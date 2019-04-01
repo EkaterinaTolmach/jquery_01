@@ -57,11 +57,13 @@ $(function() {
     console.group("Блоки с классом container, имеющие поле ввода");
     console.log($(".container").has("input"));
     console.groupEnd();
+
     /*********Активная ссылка меню***********************/
     $('.nav .nav__item').on('click', function () {
         $('.nav .nav__item').removeClass("nav__item--active");
         $(this).addClass("nav__item--active");
-    })
+    });
+
     /***************Прилипающее меню**************/
     $(document).on('scroll', function () {
         var headerH = $("#hosting").height();
@@ -70,9 +72,19 @@ $(function() {
             $("#js-nav-container").addClass("nav-container--fixed");
             $("#hosting").css("paddingTop", $("#js-nav-container").innerHeight());
         } else {
-            $("#js-nav-container").removeClass("nav-container--fixed");
-            $("#hosting").removeAttr("style");
+            $("#js-nav-container, #js-overlay").removeClass("nav-container--fixed");
         }
+    });
+
+    /***************Модальное окно******************/
+    $('.js-show-modal').on('click', function (e) {
+        e.preventDefault();
+        $('.js-modal, #js-overlay').fadeIn();
+        $('body').addClass("open-modal");
+    });
+    $('#js-overlay').on('click', function (e) {
+        $('.js-modal, #js-overlay').fadeOut();
+        $('body.open-modal').removeClass("open-modal");
     })
     //КОНЕЦ 2-ОГО ЗАДАНИЯ
 });
