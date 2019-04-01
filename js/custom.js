@@ -62,5 +62,17 @@ $(function() {
         $('.nav .nav__item').removeClass("nav__item--active");
         $(this).addClass("nav__item--active");
     })
+    /***************Прилипающее меню**************/
+    $(document).on('scroll', function () {
+        var headerH = $("#hosting").height();
+        var docScroll = $(this).scrollTop();
+        if (docScroll > headerH) {
+            $("#js-nav-container").addClass("nav-container--fixed");
+            $("#hosting").css("paddingTop", $("#js-nav-container").innerHeight());
+        } else {
+            $("#js-nav-container").removeClass("nav-container--fixed");
+            $("#hosting").removeAttr("style");
+        }
+    })
     //КОНЕЦ 2-ОГО ЗАДАНИЯ
 });
