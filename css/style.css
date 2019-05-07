@@ -67,3 +67,30 @@ body.open-modal {
     font-size:12px;
     display: none;
 }
+.rel {
+    position: relative;
+}
+.popup{
+    width:150px;
+    padding:5px;
+    background-color:#000;
+    border-radius:3px;
+    color:#fff;font-size:12px;
+    position:absolute;
+    left:50%;
+    top:120%;
+    z-index:1;
+    margin-left:-75px;
+    display:none;
+}
+.popup:before{
+    content:"";
+    border-style:solid;
+    border-width:0 5px 4px 5px;
+    border-color:transparent transparent #000 transparent;
+    position:absolute;
+    top:-3px;
+    left:50%;
+    z-index:1;
+    margin-left:-3px;
+}
