@@ -132,12 +132,13 @@ $(function() {
     $('.js-faq-title').on('click', function (e) {
         e.preventDefault();
         var active = $(this);
+        var questionId = active.attr('href');
         if (!active.hasClass('active')) {
             $('.js-faq-content').slideUp();
             $(this).removeClass('active');
         }
 
         active.toggleClass('active');
-        active.next().slideToggle();
+        $(questionId).slideToggle();
     })
 });
