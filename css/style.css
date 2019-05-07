@@ -44,3 +44,26 @@ body.open-modal {
     overflow-y: hidden;
     padding-right: 17px;
 }
+.faq{
+    width:600px;
+    margin:30px auto
+}
+.faq-title{
+    -webkit-transition:background-color .2s;
+    -moz-transition:background-color .2s;
+    transition:background-color .2s;
+    display:block;
+    padding:5px 10px;
+    color:#000;
+    text-decoration:none;
+    background-color:#eaeaea;
+    border-bottom:1px solid #d1d1d1
+}
+.faq-title:hover{
+    background-color:#ddd
+}
+.faq-content{
+    padding:5px 10px;
+    font-size:12px;
+    display: none;
+}
