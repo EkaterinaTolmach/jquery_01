@@ -140,5 +140,17 @@ $(function() {
 
         active.toggleClass('active');
         $(questionId).slideToggle();
-    })
+    });
+    /**********************Вслывающая подсказка************************/
+    $('.js-popup').hover(function () {
+        var $this = $(this);
+        var popupId = $this.attr('href');
+
+        $(popupId).fadeIn();
+    }, function () {
+        var $this = $(this);
+        var popupId = $this.attr('href');
+
+        $(popupId).fadeOut();
+    });
 });
