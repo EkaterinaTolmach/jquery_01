@@ -72,7 +72,8 @@ $(function() {
             $("#js-nav-container").addClass("nav-container--fixed");
             $("#hosting").css("paddingTop", $("#js-nav-container").innerHeight());
         } else {
-            $("#js-nav-container, #js-overlay").removeClass("nav-container--fixed");
+            $("#js-nav-container").removeClass("nav-container--fixed");
+            $("#hosting").removeAttr("style");
         }
     });
 
@@ -86,5 +87,42 @@ $(function() {
         $('.js-modal, #js-overlay').fadeOut();
         $('body.open-modal').removeClass("open-modal");
     })
+
+    /******************Проверка поля с урл*************************/
+    $('form.search-form .btn_search').on('click', function () {
+        var domainValue = $("form #js-domain-search").val();
+        var regEx = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+        console.log(regEx.test(domainValue));
+        if (!regEx.test(domainValue)) {
+            $('.domain-search').addClass("error_message");
+        } else {
+            $('.domain-search').removeClass("error_message");
+        }
+    });
+
+    /************************Замена заголовка сайта************************/
+    $(".slogan").text("New slogan");
+
+    /***************************Четные и нечетные пункты меню******************************/
+    console.group("Четные и нечетные пункты меню");
+    console.log($('.nav-container .nav a:nth-child(2n)'));
+    console.log($('.nav-container .nav a:nth-child(2n+1)'));
+    console.groupEnd();
+
+    /***************************Родительские и дочерние элементы списка в футере******************************/
+    console.group("Дочерние элементы одного из списков в футере");
+    console.log($('.footer .footer-block:first-child ul').children());
+    console.groupEnd();
+    console.group("Родительские элементы одного из списков в футере");
+    console.log($('.footer .footer-block:first-child ul').parents());
+    console.groupEnd();
+
+    /***************************Перемещение блока с картой******************************/
+    var map = $('#contacts').detach();
+    $('#testimonials').after(map);
+
+    /***************************Удаление из футера блока с телефоном и копирайтом******************************/
+    $('.footer-phone').remove();
+    $('.footer-block .copyright').remove();
     //КОНЕЦ 2-ОГО ЗАДАНИЯ
 });
