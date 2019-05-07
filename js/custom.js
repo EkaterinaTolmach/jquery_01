@@ -125,4 +125,19 @@ $(function() {
     $('.footer-phone').remove();
     $('.footer-block .copyright').remove();
     //КОНЕЦ 2-ОГО ЗАДАНИЯ
+    
+    
+    //НАЧАЛО 3-ЕГО ЗАДАНИЯ
+    /**********************Аккордеон в блоке FAQ************************/
+    $('.js-faq-title').on('click', function (e) {
+        e.preventDefault();
+        var active = $(this);
+        if (!active.hasClass('active')) {
+            $('.js-faq-content').slideUp();
+            $(this).removeClass('active');
+        }
+
+        active.toggleClass('active');
+        active.next().slideToggle();
+    })
 });
