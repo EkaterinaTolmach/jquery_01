@@ -184,7 +184,7 @@ body.open-modal {
 }
 .slick-slide img
 {
-    display: block;
+    display: inline-block;
 }
 .slick-slide.slick-loading img
 {
@@ -282,11 +282,11 @@ body.open-modal {
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: #e84c3d;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -393,7 +393,7 @@ body.open-modal {
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 10px;
     line-height: 20px;
 
     position: absolute;
@@ -407,7 +407,7 @@ body.open-modal {
     text-align: center;
 
     opacity: .25;
-    color: black;
+    color: #e84c3d;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -415,6 +415,9 @@ body.open-modal {
 .slick-dots li.slick-active button:before
 {
     opacity: .75;
-    color: black;
+    color: #e84c3d;
+}
+.testimonials__item:focus {
+    outline: none;
 }
 
