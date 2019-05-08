@@ -86,7 +86,7 @@ $(function() {
     $('#js-overlay').on('click', function (e) {
         $('.js-modal, #js-overlay').fadeOut();
         $('body.open-modal').removeClass("open-modal");
-    })
+    });
 
     /******************Проверка поля с урл*************************/
     $('form.search-form .btn_search').on('click', function () {
