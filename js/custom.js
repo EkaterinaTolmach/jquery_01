@@ -155,13 +155,13 @@ $(function() {
     });
 
     /**********************Слик слайдер************************/
-    // $('#js-slider-testimonials').slick({
-    //     infinite: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     dots: true,
-    //     arrows: true
-    // });
+    $('#js-slider-testimonials').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true
+    });
 
     /**********************Owl-carousel слайдер************************/
     $(".owl-carousel").owlCarousel({
@@ -169,4 +169,7 @@ $(function() {
         nav: true,
         loop: true
     });
+
+    /**********************BXslider слайдер************************/
+    $('.bxslider').bxSlider();
 });
