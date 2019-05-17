@@ -1,7 +1,8 @@
 function showSelectors(selector) {
     var length = String(selector.length),
         nameSelector = selector.selector;
-    return "На странице "+length+" элемент(ов) с селектором "+nameSelector;
+    // return "На странице "+length+" элемент(ов) с селектором "+nameSelector;
+    return selector;
 }
 function showSomeShitInConsole(e){
     e.preventDefault();
