@@ -125,6 +125,8 @@ $(function() {
     /***************************Удаление из футера блока с телефоном и копирайтом******************************/
     $('.footer-phone').remove();
     $('.footer-block .copyright').remove();
+
+    console.groupEnd();
     //КОНЕЦ 2-ОГО ЗАДАНИЯ
     
     
@@ -185,6 +187,7 @@ $(function() {
     );
     wow.init();
 
+    /*********************Карта яндекса********************/
     ymaps.ready(function () {
         var myMap = new ymaps.Map('yandex-map', {
                 center: [52.279419, 104.255262],
@@ -216,5 +219,10 @@ $(function() {
         myMap.behaviors.disable('scrollZoom');
         myMap.geoObjects
             .add(myPlacemark);
+    });
+
+    /*********************Набегающие цифры********************/
+    $('.js-counter').counterUp({
+        time: 3000
     });
 });
