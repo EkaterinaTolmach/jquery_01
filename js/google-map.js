@@ -36,7 +36,7 @@ function init() {
 
     var neighborhoods = [
         // Main
-        {lat: 52.2785763, lng: 104.253234, title: 'MegaMir IT', content: 'Text text text', icon: 'map-pin.png'},
+        {lat: 52.2794017, lng: 104.2531867, title: 'MegaMir IT', content: 'Text text text', icon: 'map-pin.png'},
         {lat: 52.2621412, lng: 104.3183988, title: 'Home sweet home', content: 'Text text text2', icon: 'map-pin.png'}
     ];
 
