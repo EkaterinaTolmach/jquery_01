@@ -236,6 +236,12 @@ $(function() {
         // loop: true,
         // autoInsertCss: false,
     }
-
     var typed = new Typed(".js-typed", options);
+
+    /*********************Стилизация чекбокса и радио-кнопок https://github.com/fronteed/icheck********************/
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_flat-red',
+        radioClass: 'iradio_flat-red'
+    });
+
 });
