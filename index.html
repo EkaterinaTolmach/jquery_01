@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,700|PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/iCheck/skins/flat/red.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="i/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="i/favicons/apple-touch-icon-60x60.png">
@@ -470,7 +471,7 @@
             <label class="subscribe-title" for="subscribe_email">subscribe</label>
             <form action="" method="" class="subscribe-form">
                 <input type="text" name="subscribe_email" class="subscribe-input" id="subscribe_email" placeholder="Enter your e-mail here">
-                <input type="checkbox" checked>
+
                 <button class="btn btn_red btn_subscribe">send</button>
             </form>
         </div>
@@ -543,7 +544,18 @@
             <label for="password">Name</label>
             <input name="password" placeholder="Password" id="password" type="password">
         </p>
-        <a href="#" type="submit" class="btn btn_red js-modal-close">Log in</a>
+        <p>
+            <label for="check">Check something</label>
+            <input type="checkbox" checked name="check" id="check">
+        </p>
+        <p>
+            <label for="radio-male">Male</label>
+            <input type="radio" name="sex" id="radio-male">
+            <label for="radio-female">Female</label>
+            <input type="radio" name="sex" id="radio-female">
+        </p>
+
+        <button type="submit" disabled class="btn btn_red js-modal-close">Log in</button>
     </form>
 </div>
 
@@ -563,6 +575,7 @@
 <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
 <script src="bower_components/Counter-Up/jquery.counterup.min.js"></script>
 <script src="bower_components/typed.js/lib/typed.min.js"></script>
+<script src="bower_components/iCheck/icheck.min.js"></script>
 
 <!--<script-->
         <!--src="https://code.jquery.com/jquery-3.3.1.min.js"-->
