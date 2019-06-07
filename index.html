@@ -52,7 +52,7 @@
                 <a href="#" class="nav__item">contacts</a>
             </nav>
 
-            <a href="#" class="btn btn_login pull-right js-show-modal">login</a>
+            <a href="#" class="btn btn_login pull-right js-show-modal">Subscribe</a>
         </div><!-- /.container -->
     </div><!-- /.nav-container -->
 
@@ -551,16 +551,20 @@
 
 <!-- Modals -->
 <div class="overlay" id="js-overlay"></div>
-<div class="modal js-modal" id="js-login-modal">
-    <h2>Modal Title</h2>
+<div class="modal js-modal subscribing" id="js-login-modal">
+    <h2>Subscribe</h2>
     <form action="/">
         <p>
-            <label for="login">Login</label>
-            <input name="login" placeholder="Login" id="login" type="text">
+            <input name="name" placeholder="Name" id="name" type="text">
         </p>
         <p>
-            <label for="password">Name</label>
-            <input name="password" placeholder="Password" id="password" type="password">
+            <input name="lastname" placeholder="Lastname" id="lastname" type="text">
+        </p>
+        <p>
+            <input name="email" placeholder="Email" id="email" type="email">
+        </p>
+        <p>
+            <input name="phone" placeholder="Phone" id="phone" type="text">
         </p>
         <p>
             <label for="check">Check something</label>
@@ -573,7 +577,7 @@
             <input type="radio" name="sex" id="radio-female">
         </p>
 
-        <button type="submit" disabled class="btn btn_red js-modal-close">Log in</button>
+        <button type="submit" disabled class="btn btn_red js-modal-close">Subscribe</button>
     </form>
 </div>
 
