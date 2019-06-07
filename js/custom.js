@@ -223,7 +223,7 @@ $(function() {
 
     /*********************Набегающие цифры********************/
     $('.js-counter').counterUp({
-        time: 3000
+        time: 1500
     });
 
     /*********************Автонабор текста https://github.com/mattboldt/typed.js********************/
@@ -243,5 +243,10 @@ $(function() {
         checkboxClass: 'icheckbox_flat-red',
         radioClass: 'iradio_flat-red'
     });
-
+    $('.js-someCheck').on('ifChecked', function(event){
+        $('.btn.js-modal-close').prop('disabled',false);
+    });
+    $('.js-someCheck').on('ifUnchecked', function(event){
+        $('.btn.js-modal-close').prop('disabled',true)
+    });
 });
