@@ -231,11 +231,10 @@ $(function() {
         strings: ["Доброе утро!", "В смысле, добрый день!", "В общем, доброго времени суток :)"],
         typeSpeed: 40,
         showCursor: true,
-        typeSpeed: 100,
         backSpeed: 50,
         // loop: true,
         // autoInsertCss: false,
-    }
+    };
     var typed = new Typed(".js-typed", options);
 
     /*********************Стилизация чекбокса и радио-кнопок https://github.com/fronteed/icheck********************/
