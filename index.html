@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,700|PT+Sans:400,700' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="bower_components/iCheck/skins/flat/red.css">
+    <link rel="stylesheet" href="bower_components/rangeslider.js/dist/rangeslider.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="i/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="i/favicons/apple-touch-icon-60x60.png">
@@ -395,6 +396,22 @@
 </div><!-- /.container -->
 
 
+<!-- Range of love -->
+<div class="container">
+    <div class="range">
+        <div class="range-label">
+            Do you like our blog?
+        </div>
+
+        <!--<span class="js-range-value"></span>-->
+        <button type="button" class="js-btn minus">−</button>
+        <input type="range" min="100" max="1000" value="300" step="100" id="js-range-slider">
+        <button type="button" class="js-btn plus">
+            +
+        </button>
+    </div>
+</div>
+
 <!-- FAQ -->
 <div class="container page-block">
     <h2 class="title title_dark text-center">FAQ</h2>
@@ -609,6 +626,7 @@
 <script src="bower_components/typed.js/lib/typed.min.js"></script>
 <script src="bower_components/iCheck/icheck.min.js"></script>
 <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="bower_components/rangeslider.js/dist/rangeslider.min.js"></script>
 
 <!--<script-->
 <!--src="https://code.jquery.com/jquery-3.3.1.min.js"-->
