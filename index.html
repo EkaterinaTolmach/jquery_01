@@ -489,8 +489,8 @@
 
         <div class="subscribe-container">
             <label class="subscribe-title" for="subscribe_email">subscribe</label>
-            <form action="" method="" class="subscribe-form">
-                <input type="text" name="subscribe_email" class="subscribe-input" id="subscribe_email"
+            <form action="/" method='' class="subscribe-form" id="short_subscribe">
+                <input type="email" name="subscribe_email" class="subscribe-input" id="subscribe_email"
                        placeholder="Enter your e-mail here">
 
                 <button class="btn btn_red btn_subscribe">send</button>
@@ -553,18 +553,25 @@
 <div class="overlay" id="js-overlay"></div>
 <div class="modal js-modal subscribing" id="js-login-modal">
     <h2>Subscribe</h2>
-    <form action="/">
+    <form action="/" id="js-subscribe-form">
+        <div class="message js-form-message">Исправьте пожалуйста все ошибки</div>
         <p>
-            <input name="name" placeholder="Name" id="name" type="text">
+            <input name="name" placeholder="Name" type="text">
         </p>
         <p>
-            <input name="lastname" placeholder="Lastname" id="lastname" type="text">
+            <input name="lastname" placeholder="Lastname" type="text">
         </p>
         <p>
-            <input name="email" placeholder="Email" id="email" type="email">
+            <input name="email" placeholder="Email" type="email">
         </p>
         <p>
-            <input name="phone" placeholder="Phone" id="phone" type="text">
+            <input name="phone" placeholder="Phone" type="text">
+        </p>
+        <p>
+            <input name="password" placeholder="Password" id="password-repeat" type="password">
+        </p>
+        <p>
+            <input name="password_repeat" placeholder="Repeat password" type="password">
         </p>
         <p>
             <label for="check">Check something</label>
@@ -579,6 +586,9 @@
 
         <button type="submit" disabled class="btn btn_red js-modal-close">Subscribe</button>
     </form>
+</div>
+<div class="modal js-modal submit-success">
+    <div class="success-message">Форма успешно отправлена!</div>
 </div>
 
 
