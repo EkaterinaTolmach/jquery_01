@@ -249,7 +249,7 @@ $(function() {
         $('.btn.js-modal-close').prop('disabled',true)
     });
 
-    /*********************Валидация формы https://github.com/fronteed/icheck********************/
+    /*********************Валидация формы ********************/
     $("#js-subscribe-form").validate({
         rules: {
             name: {
@@ -341,4 +341,33 @@ $(function() {
         }
     });
 
+    /*********************Стилизация ползунка диапазона https://rangeslider.js.org/********************/
+    var rangeSlider = $('#js-range-slider'),
+        rangeValue = $('.js-range-value'),
+        step = parseInt(rangeSlider.attr('step')),
+        min = rangeSlider.attr('min'),
+        max = rangeSlider.attr('max');
+    rangeSlider.rangeslider({
+        polyfill: false,
+        onInit: function () {
+            rangeValue.text(rangeSlider.val());
+        },
+        onSlide: function(position, value) {
+            rangeValue.text(value);
+        },
+    });
+    $('.js-btn').on('click', function (e) {
+        var currentVal = parseInt(rangeSlider.val());
+        if ($(this).hasClass('minus')) {
+            if (currentVal > min) {
+                rangeSlider.val(currentVal - step).rangeslider('update', true);
+            }
+        } else {
+            if (currentVal < max) {
+                rangeSlider.val(currentVal + step).rangeslider('update', true);
+            }
+        }
+
+
+    })
 });
