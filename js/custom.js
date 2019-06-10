@@ -41,7 +41,7 @@ $(function() {
 
     console.log(showSelectors($('[href][class]')));
     console.log(showSelectors($('.footer-nav__link[href]')));
-    $("button").on("click",showSomeShitInConsole);
+    // $("button").on("click",showSomeShitInConsole);
     $("a.logo").on("click",showModal);
     $(".js-get-started").on("click", goToPlans);
     console.groupEnd();
@@ -81,7 +81,7 @@ $(function() {
     /***************Модальное окно******************/
     $('.js-show-modal').on('click', function (e) {
         e.preventDefault();
-        $('.js-modal, #js-overlay').fadeIn();
+        $('.js-modal.subscribing, #js-overlay').fadeIn();
         $('body').addClass("open-modal");
     });
     $('#js-overlay').on('click', function (e) {
@@ -248,4 +248,97 @@ $(function() {
     $('.js-someCheck').on('ifUnchecked', function(event){
         $('.btn.js-modal-close').prop('disabled',true)
     });
+
+    /*********************Валидация формы https://github.com/fronteed/icheck********************/
+    $("#js-subscribe-form").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 3
+            },
+            lastname: {
+                required: true,
+                minlength: 3
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                minlength: 6
+            },
+            password_repeat: {
+                required: true,
+                equalTo: "#password-repeat"
+            },
+            phone: {
+                required: true,
+                minlength: 11,
+                digits: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Обязательно для заполнения",
+                minlength: "Минимум 3 символа в имени"
+            },
+            lastname: {
+                required: "Обязательно для заполнения",
+                minlength: "Минимум 3 символа в фамилии"
+            },
+            email: {
+                required: "Обязательно для заполнения",
+                email: "Введите корректный email"
+            },
+            phone: {
+                required: "Обязательно для заполнения",
+                minlength: "Введите корректный номер"
+            },
+            password: {
+                required: "Обязательно для заполнения",
+                minlength: "Минимум 6 символов в пароле"
+            },
+            password_repeat: {
+                required: "Обязательно для заполнения",
+                equalTo: "Должно быть равно полю Пароль"
+            }
+        },
+        focusCleanup: true, //убирает сообщение об ошибке в активном поле
+        focusInvalid: false, //ставит фокус на первое поле ввода
+        invalidHandler: function () {
+            $('.js-form-message').addClass('active');
+        },
+        onkeyup: function (element) {
+            $('.js-form-message').removeClass('active');
+        },
+        // errorPlacement: function(error, element) {
+        //     return true; //чтобы не выводить подробных ошибок у каждого поля
+        // },
+        submitHandler: function () {
+            $('.js-modal.subscribing').fadeOut();
+            $('.js-modal.submit-success').fadeIn();
+        }
+    });
+    $("#short_subscribe").validate({
+        rules: {
+            subscribe_email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            subscribe_email: {
+                required: "Обязательно для заполнения",
+                email: "Введите корректный email"
+            }
+        },
+        focusCleanup: true, //убирает сообщение об ошибке в активном поле
+        focusInvalid: false, //ставит фокус на первое поле ввода
+        submitHandler: function () {
+
+            $('.js-modal.submit-success, #js-overlay').fadeIn();
+        }
+    });
+
 });
