@@ -949,3 +949,31 @@ label#subscribe_email-error {
     width: 50px;
     top: -5px;
 }
+.range {
+    width: 500px;
+    margin: 0 auto;
+}
+.range input {
+    width: 80%;
+}
+.range-label {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.rangeslider__fill {
+    background: #e84c3d;
+}
+.rangeslider__handle:after {
+    width: 14px;
+    height: 14px;
+    background-image: url("../i/hearth-icon.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    /*background-size: auto;*/
+}
+.range .js-btn {
+    width: 80px;
+    height: 30px;
+    margin: 10px 0;
+}
