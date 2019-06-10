@@ -367,7 +367,5 @@ $(function() {
                 rangeSlider.val(currentVal + step).rangeslider('update', true);
             }
         }
-
-
-    })
+    });
 });

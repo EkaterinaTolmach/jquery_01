@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sticky</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .header {
+            height: 100px;
+            background-color: #444;
+        }
+        .container {
+            width: 100%;
+            max-width: 620px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        .container:before,
+        .container:after {
+            content: "";
+            display: table;
+            width: 100%;
+        }
+        .container:after {
+            clear: both;
+        }
+        .main {
+            width: 400px;
+            float: left;
+            padding-right: 30px;
+        }
+        .sidebar {
+            width: 200px;
+            float: left;
+        }
+        .footer {
+            height: 300px;
+            background-color: #666;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header"></div>
+
+<div class="container">
+    <div class="main">
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas deserunt earum numquam quos, eum, similique, sapiente quae sequi in quam ullam at maiores, odit adipisci harum tempore non molestias.</p>
+    </div><!-- /.main -->
+
+    <div class="sidebar">
+        <div class="sidebar-block">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nam laborum culpa vero fuga voluptatibus quo recusandae dolor commodi quis, similique distinctio consequuntur, harum, veniam dolorem blanditiis mollitia, porro sunt!</p>
+        </div>
+        <div class="sidebar-block" id="js-sticky">
+            <h3>Липкая-липкая штука</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nam laborum culpa vero fuga voluptatibus quo recusandae dolor commodi quis, similique distinctio consequuntur, harum, veniam dolorem blanditiis mollitia, porro sunt!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nam laborum culpa vero fuga voluptatibus quo recusandae dolor commodi quis, similique distinctio consequuntur, harum, veniam dolorem blanditiis mollitia, porro sunt!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nam laborum culpa vero fuga voluptatibus quo recusandae dolor commodi quis, similique distinctio consequuntur, harum, veniam dolorem blanditiis mollitia, porro sunt!</p>
+        </div>
+    </div>
+
+</div><!-- /.container -->
+
+<div class="footer"></div>
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-sticky/jquery.sticky.js"></script>
+<script>
+    var bottomOffset = $('.footer').innerHeight();
+    $("#js-sticky").sticky({
+        topSpacing:5,
+        bottomSpacing: bottomOffset
+    });
+</script>
+
+</body>
+</html>
