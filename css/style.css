@@ -920,3 +920,32 @@ ul.bxslider {
     outline: none;
     background-color: transparent;
 }
+.subscribing p input.error {
+    border-color: #e84c3d;
+}
+label.error {
+    font-size: 12px;
+    color: #e84c3d;
+}
+.subscribing .message {
+    display: none;
+    margin: 10px 0;
+    background-color: rgba(232, 76, 61, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+.subscribing .message.active {
+    display: block;
+}
+.submit-success {
+    display: none;
+}
+.subscribe-form {
+    position: relative;
+}
+label#subscribe_email-error {
+    position: absolute;
+    right: -60px;
+    width: 50px;
+    top: -5px;
+}
