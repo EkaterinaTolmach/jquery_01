@@ -368,4 +368,14 @@ $(function() {
             }
         }
     });
+
+    /*********************Стилизация скролла https://github.com/inuyaksa/jquery.nicescroll********************/
+    $("body, .js-text-scroll").niceScroll({
+        cursorcolor: "#e84c3d",
+        cursoropacitymin: 0.3,
+        cursorwidth: "8px",
+        horizrailenabled: false,
+        cursorborder: "0",
+        zindex: 10500,
+    });
 });
