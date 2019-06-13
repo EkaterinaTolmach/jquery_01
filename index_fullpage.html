@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/fullpage.js/dist/fullpage.min.css">
+    <title>FullPage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+        }
+        h2 {
+            margin: 0;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+        .section {
+            height: 400px;
+            padding: 20px;
+            background-color: #46b1c4;
+            color: #fff;
+            text-align: center;
+        }
+        .section_green {
+            background-color: #57e672;
+        }
+        .section_red {
+            background-color: #dd5454;
+        }
+        ul {
+            position: fixed;
+            top: 0;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<ul id="js-menu">
+    <li data-menuanchor="slide1" class="active"><a href="#slide1">First section</a></li>
+    <li data-menuanchor="slide2"><a href="#slide2">Second section</a></li>
+    <li data-menuanchor="slide3"><a href="#slide3">Third section</a></li>
+</ul>
+<div id="js-fullpage">
+    <div class="section" data-anchor="slide1">
+        <div class="container">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam praesentium aperiam accusantium ipsa non a eius dolor vitae expedita iusto, optio assumenda repellat delectus libero sit nam, consectetur laborum omnis.</p>
+        </div>
+    </div>
+
+    <div class="section section_green" data-anchor="slide2">
+        <div class="container">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam praesentium aperiam accusantium ipsa non a eius dolor vitae expedita iusto, optio assumenda repellat delectus libero sit nam, consectetur laborum omnis.</p>
+        </div>
+    </div>
+
+    <div class="section section_red" data-anchor="slide3">
+        <div class="container">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam praesentium aperiam accusantium ipsa non a eius dolor vitae expedita iusto, optio assumenda repellat delectus libero sit nam, consectetur laborum omnis.</p>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/fullpage.js/dist/fullpage.min.js"></script>
+<script src="bower_components/jquery.easing/jquery.easing.min.js"></script>
+<script>
+    $(function() {
+        $('#js-fullpage').fullpage({
+            //options here
+            // autoScrolling:true,
+            // scrollHorizontally: true
+            menu: 'js-menu',
+            anchors:['slide1', 'slide2', 'slide3'],
+            navigation: true,
+            navigationTooltips: ['Первая секция', 'Вторая секция', 'Третья секция'],
+            showActiveTooltip: true,
+            css3: false,
+            // easingcss3: 'ease-in-out',
+            easing: 'easeInOutCubic',
+            scrollingSpeed: 1000,
+            loopBottom: true,
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -43,7 +43,10 @@ $(function() {
     console.log(showSelectors($('.footer-nav__link[href]')));
     // $("button").on("click",showSomeShitInConsole);
     $("a.logo").on("click",showModal);
+
+    /**********************Плавный скролл*************************/
     $(".js-get-started").on("click", goToPlans);
+
     console.groupEnd();
     //КОНЕЦ 1-ОГО ЗАДАНИЯ
 
